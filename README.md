@@ -1,5 +1,4 @@
-# Neural Elastic Dynamics
-*Note: This repository was previously titled "Learning Physical Invariants from Unsupervised Video". The current focus is specifically on learning exact physical invariants from state transitions of hybrid dynamical systems.*
+# Learning Physical Invariants
 
 ## Overview
 
@@ -9,7 +8,7 @@ This research project investigates how neural networks can learn to model perfec
 
 Standard neural networks (like MLPs or basic GNNs) trained with MSE loss struggle to learn hybrid dynamical systems. Hard-sphere collisions involve a smooth continuous flow interrupted by instantaneous jump discontinuities (impulses). 
 
-When trained to predict the next state ($s_{t+1}$) from the current state ($s_t$), networks optimized via MSE tend to under-predict sharp changes representing collisions (a form of regression to the mean for rare events). For physics simulation, this manifests as a **systematic energy bleed**—the network learns a dissipative, damped system rather than a perfectly conservative one.
+When trained to predict the next state ($s_{t+1}$) from the current state ($s_t$), networks optimized via MSE tend to under-predict sharp changes representing collisions (a form of regression to the mean for rare events). For physics simulation, this manifests as a **systematic energy bleed** -> the network learns a dissipative, damped system rather than a perfectly conservative one.
 
 ## Architectural Progression
 
